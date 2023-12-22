@@ -1,0 +1,1245 @@
+
+.container1 {
+    display: flex; /* Use flexbox */
+}
+
+.column {
+   position: absolute;
+   left: 270px;
+   right: 50px;
+   
+}
+
+.column1{
+    position: fixed;
+    height: 100%;
+}
+
+.dashboard {
+    position: relative;
+}
+
+.dashboard img {
+    padding: 8px 85px;
+    width: 1500px;
+    
+}
+
+.dashboard-text {
+    position: absolute;
+    top: 100px;
+    padding: 25px 113px;
+}
+
+.dashboard-text h1 {
+    color: rgb(56, 53, 100);
+    text-shadow: 0px 0px 3px rgba(101, 53, 113, 0.5);
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/*========================== DASHBOARD ======================*/
+.values {
+    margin-left: 70px;
+    padding: 30px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.values .val-box {
+    width: 300px;
+    padding: 16px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.values .val-box:nth-child(1) {
+    background: #5680E9;
+}
+
+.values .val-box:nth-child(2) {
+    background: #5AB9EA;
+}
+
+.values .val-box:nth-child(3) {
+    background: #8860D0;
+}
+
+.values .val-box i {
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.values .val-box:nth-child(1) i{
+    color: #5680E9;
+    background: #ffffff;
+}
+
+.values .val-box:nth-child(2) i{
+    color: #5AB9EA;
+    background: #ffffff;
+}
+
+.values .val-box:nth-child(3) i{
+    color: #8860D0;
+    background: #ffffff;
+}
+
+.values .val-box h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.values .val-box span {
+    font-size: 15px;
+    color: #c6c6c6;
+}
+
+/*========================== CHARTS DASHBOARD ======================*/
+.graphbox {
+    margin-left: 55px;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+    min-height: 200px;
+}
+
+.graphbox .box {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    background: #ffffff;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+/* Profile Style */
+
+
+/*========================== VACCINE INVENTORY PAGE ======================*/
+.table2 {
+    width: 100%;
+    padding: 50px 30px;
+    margin-left: 50px;
+}
+
+.table2_section {
+    height: 370px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    max-width: 1000px;
+    min-width: 900px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+    
+}
+
+.table2 button {
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 6px;
+    color: #ffffff;
+    transition: .3s ease;
+}
+
+.table2_section td button:nth-child(1) {
+    background-color: #8860D0;
+}
+
+.table2_section td button:nth-child(2) {
+    background-color: #f50b0b;
+}
+
+.table2_section td button:hover {
+    background-color: #C1C8E4;
+    transition: .3s ease;
+}
+
+.table2 .btn:hover {
+    background: #8860D0;
+    cursor: pointer;
+}
+
+.table2_section thead th {
+    position: sticky;
+    top: 0;
+    background-color: #5AB9EA;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.table2_section thead th:nth-child(1) {
+    border-radius: 10px 0 0 0;
+}
+
+.table2_section thead th:nth-child(6) {
+    border-radius: 0 10px 0 0;
+}
+
+.table2_section th, td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 5px;
+    word-break: break-all;
+    text-align: center;
+}
+
+.table2_section tr:hover td {
+    color: #5AB9EA;
+    cursor: pointer;
+    background-color: #F6F9FC;
+}
+
+/* Style the modals */
+.editModal2-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 1em;
+    width: 750px;
+    height: 550px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.editModal2-content h2 {
+    line-height: 2;
+    text-align: center;
+    color: #8860D0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.editModal2-content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+form .user-details .input-box {
+    width: 100%;
+    max-width: 294px;
+    margin: 20px auto; 
+}
+
+form .user-details .date {
+    width: 100%;
+    max-width: 294px;
+    margin: 20px auto; 
+}
+
+.user-details .input-box .details {
+    font-size: 14px;
+    color: #8860D0;
+}
+
+.user-details .date .details {
+    font-size: 14px;
+    color: #8860D0;
+}
+
+.user-details .input-box input {
+    width: 100%;
+    height: 80%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #8860D0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #8860D0;
+    padding: 10px 20px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.user-details .date input {
+    width: 100%;
+    height: 80%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #8860D0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #8860D0;
+    padding: 10px 20px;
+    transition: color 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+
+.user-details .input-box input::placeholder {
+    color: #8860D0;
+}
+
+.user-details .date input::placeholder {
+    color: #8860D0;
+}
+
+.user-details .input-box input:focus {
+    color: #84CEEB;
+    border-color: #84CEEB; 
+}
+
+.user-details .date input:focus {
+    color: #84CEEB;
+    border-color: #84CEEB; 
+}
+
+.editModal2-content button[type="submit"],
+.editModal2-content button {
+    width: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: #8860D0;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-top: 80px;
+    cursor: pointer;
+}
+
+.editModal2-content button[type="submit"]:hover {
+    background: #5AB9EA;
+    transition: .3s ease;
+}
+
+.trashModal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    width: 450px;
+    padding: 43px 69px 31px 69px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 32px;
+    border-radius: 20px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.trashModal-content h2 {
+    color: #8860D0;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.trashModal-content button {
+    width: 100px;
+    border-radius: 50px;
+    border: none;
+    background: #8860D0;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.trashModal-content button:hover {
+    background: #5AB9EA;
+    transition: .3s ease;
+}
+
+/*========================== IMMUNIZATION RECORD PAGE ======================*/
+.table3 {
+    width: 100%;
+    padding: 20px 30px;
+    margin-left: 50px;
+}
+.search{
+    margin-left: 105px;
+    width: 95%;
+}
+.search input{
+    width: 40%;
+    height: 80%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #8860D0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #8860D0;
+    padding: 10px 20px;
+    transition: color 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+.search button {
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 11px;
+    background-color: #8860D0;
+    color: #ffffff;
+    transition: .3s ease;
+}
+
+.search button:hover {
+    background-color: #C1C8E4;
+    transition: .3s ease;
+}
+.search button:nth-child(4) {
+    float: right;
+   padding-left: 20px;
+   padding-right: 20px;
+   margin-right: 10px;
+}
+
+
+
+.table3_section {
+    height: 370px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    max-width: 1000px;
+    min-width: 900px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+    
+}
+
+
+.table3 a {
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 6px;
+    color: #ffffff;
+    transition: .3s ease;
+}
+
+.table3_section td a:nth-child(1) {
+    background-color: #5680E9;
+}
+
+.table3_section td button:nth-child(2) {
+    background-color: #8860D0;
+}
+
+.table3_section td button:hover {
+    background-color: #C1C8E4;
+    transition: .3s ease;
+}
+
+.table3 .btn:hover {
+    background: #8860D0;
+    cursor: pointer;
+}
+
+.table3_section thead th {
+    position: sticky;
+    width: 100%;
+    background-color: #5AB9EA;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.table3_section thead th:nth-child(1) {
+    border-radius: 10px 0 0 0;
+}
+.table3_section thead th:nth-child(6) {
+    border-radius: 0 10px 0 0;
+}
+
+
+.table3_section th, td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 5px;
+    word-break: break-all;
+    text-align: center;
+}
+
+.table3_section tr:hover td {
+    color: #5AB9EA;
+    cursor: pointer;
+    background-color: #F6F9FC;
+}
+
+/* Style the modals */
+.eyeModal-content {
+    background-color: #fff;
+    margin: 2% auto;
+    padding: 1em;
+    width: 650px;
+    height: 600px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.eyeModal-content .header {
+    height: 75px;
+    background: #8860D0;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+}
+
+.eyeModal-content .title {
+    height: 45px;
+    background: #C1C8E4;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+    margin-top: 20px;
+}
+
+.eyeModal-content .header h2 {
+    color: white;
+    padding-top: 15px;
+    padding-left: 10px;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.eyeModal-content .title h2 {
+    color: black;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.eyeModal-content .label {
+    font-weight: bold;
+    color: black;
+}
+
+.eyeModal-content p {
+    padding-top: 10px;
+    font-size: 14px;
+    text-align: justify;
+    color: black;
+}
+
+.eyeModal-content button {
+    width: 100px;
+    border-radius: 50px;
+    border: none;
+    background: #8860D0;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.eyeModal-content button:hover {
+    background: #5AB9EA;
+    transition: .3s ease;
+}
+
+.editModal3-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 1em;
+    width: 750px;
+    height: 550px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.editModal3-content h2 {
+    line-height: 2;
+    text-align: center;
+    color: #8860D0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.editModal3-content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.editModal3-content button[type="submit"],
+.editModal3-content button {
+    width: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: #8860D0;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.editModal3-content button[type="submit"]:hover {
+    background: #5AB9EA;
+    transition: .3s ease;
+}
+
+.editModal3-content button {
+    width: 100px;
+    border-radius: 50px;
+    border: none;
+    background: #8860D0;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.editModal3-content button:hover {
+    background: #5AB9EA;
+    transition: .3s ease;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #8860D0);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, #5AB9EA);
+}
+/*========================== Select user PAGE ======================*/
+
+.search1{
+    margin-left: 105px;
+    width: 95%;
+    margin-bottom: 40px;
+}
+.search1 p {
+    float: left;
+    
+    padding: 10px;
+    font-size: 18px;
+    color: rgb(121, 121, 121);
+}
+.search1 input{
+    width: 40%;
+    height: 80%;
+    margin-bottom: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #8860D0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #8860D0;
+    padding: 10px 20px;
+    transition: color 0.3s, border-color 0.3s;
+    cursor: pointer;
+    float: right
+}
+.search1 button {
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 11px;
+    background-color: #8860D0;
+    color: #ffffff;
+    transition: .3s ease;
+    float: right;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.search1 button:hover {
+    background-color: #C1C8E4;
+    transition: .3s ease;
+}
+.search1 button:nth-child(4) {
+    float: right;
+   padding-left: 20px;
+   padding-right: 20px;
+   margin-right: 10px;
+}
+
+/*========================== REPORT DETAILS PAGE ======================*/
+.ReportDetails-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 2% auto;
+    margin-left: 90px;
+    padding: 1em;
+    width: 950px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.ReportDetails-content .header {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    height: 75px;
+}
+
+.ReportDetails-content .title {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    background: #C1C8E4;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+    margin-top: 20px;
+}
+
+.ReportDetails-content .header h2 {
+    color: black;
+    padding-top: 15px;
+    padding-left: 10px;
+    font-size: 30px;
+    margin: 0;
+}
+
+.ReportDetails-content .header img {
+    width: 121px; /* Adjust the width of the image as needed */
+    height: auto; /* Maintain the aspect ratio */
+    margin-left: 430px; /* Add some space between the image and the text */
+}
+
+.ReportDetails-content .title h2 {
+    color: black;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.ReportDetails-content span {
+    font-weight: bold;
+}
+
+.ReportDetails-content p {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    font-size: 14px;
+    text-align: justify;
+    color: black;
+}
+
+.ReportDetails-content .modal-table {
+    width: 100%;
+    padding: 50px 30px;
+}
+
+.ReportDetails-content .modal-table table {
+    width: 100%;
+    table-layout: fixed;
+    max-width: 800px;
+    min-width: 700px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+    margin-bottom: -60px;
+}
+
+.ReportDetails-content .modal-table_section thead th {
+    position: sticky;
+    top: 0;
+    background-color: #8860D0;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.modal-table_section thead th:nth-child(1) {
+    border-radius: 10px 0 0 0;
+}
+
+.modal-table_section thead th:nth-child(4) {
+    border-radius: 0 10px 0 0;
+}
+
+.ReportDetails-content .modal-table_section th, td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 5px;
+    word-break: break-all;
+    text-align: center;
+}
+
+.ReportDetails-content .modal-table_section tr:hover td {
+    color: #5AB9EA;
+    cursor: pointer;
+    background-color: #F6F9FC;
+}
+
+.editable {
+    border-bottom: 1px solid black; /* You can customize the underline style */
+    cursor: text; /* Change the cursor to indicate text input */
+}
+
+#Report-Details .editable-info span {
+    font-weight: 400;
+}
+
+#Report-Details .editable-info .label {
+    font-weight: bold;
+}
+
+#editButton, #saveButton, #editVaccineButton, #saveVaccineButton {
+    padding: 5px 10px;
+    margin-left: 800px;
+    font-size: 16px;
+    background-color: #8860D0;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#saveButton, #saveVaccineButton {
+    background-color: #84CEEB;
+}
+
+#editButton:hover, #editVaccineButton:hover {
+    background-color: #84CEEB;
+}
+
+#saveButton:hover, #saveVaccineButton:hover {
+    background-color: #8860D0;
+}
+
+/*========================== IT END USER MANAGEMENT ======================*/
+.IT-search{
+    float: right;
+    margin-right: 15px;
+    margin-top: 30px;
+}
+.IT-search input{
+    width: 400px;
+    height: 80%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #8860D0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #8860D0;
+    padding: 10px 20px;
+    transition: color 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+.IT-search button {
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 11px;
+    background-color: #8860D0;
+    color: #ffffff;
+    transition: .3s ease;
+}
+
+.IT-search button:hover {
+    background-color: #C1C8E4;
+    transition: .3s ease;
+}
+
+.IT-table {
+    width: 100%;
+    padding: 50px 30px;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.ITtable_section {
+    height: 370px;
+    overflow: auto;
+}
+
+.IT-table table {
+    width: 100%;
+    table-layout: fixed;
+    max-width: 1300px;
+    min-width: 800px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.IT-table a {
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 6px;
+    color: #ffffff;
+    transition: .3s ease;
+    background-color: #5680E9;
+}
+
+.IT-table button {
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 9px 7px;
+    color: #ffffff;
+    transition: .3s ease;
+    background-color: #8860D0;
+}
+
+.IT-table a:hover {
+    background-color: #C1C8E4;
+    transition: .3s ease;
+}
+
+.IT-table button:hover {
+    background-color: #C1C8E4;
+    transition: .3s ease;
+}
+
+.table3 .btn:hover {
+    background: #8860D0;
+    cursor: pointer;
+}
+
+.ITtable_section thead th {
+    position: sticky;
+    top: 0;
+    background-color: #5AB9EA;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.ITtable_section thead th:nth-child(1) {
+    border-radius: 10px 0 0 0;
+}
+
+.ITtable_section thead th:nth-child(8) {
+    border-radius: 0 10px 0 0;
+}
+
+.ITtable_section th, td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 5px;
+    word-break: break-all;
+    text-align: center;
+}
+
+.ITtable_section tr:hover td {
+    color: #5AB9EA;
+    cursor: pointer;
+    background-color: #F6F9FC;
+}
+
+.back-button {
+    padding: 10px 20px;
+    width: 100px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #8860D0;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    float: right;
+}
+
+.back-button:hover {
+    background-color: #84CEEB;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: 65.5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.editModal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 1em;
+    width: 750px;
+    height: 550px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.editModal-content h2 {
+    line-height: 2;
+    text-align: center;
+    color: #8860D0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.editModal-content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+form .user-details .input-box {
+    width: 100%;
+    max-width: 294px;
+    margin: 20px auto; 
+}
+
+form .user-details .date {
+    width: 100%;
+    max-width: 294px;
+    margin: 20px auto; 
+}
+
+.user-details .input-box .details {
+    font-size: 14px;
+    color: #8860D0;
+}
+
+.user-details .date .details {
+    font-size: 14px;
+    color: #8860D0;
+}
+
+.user-details .input-box input {
+    width: 100%;
+    height: 80%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #8860D0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #8860D0;
+    padding: 10px 20px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.user-details .date input {
+    width: 100%;
+    height: 80%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #8860D0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #8860D0;
+    padding: 10px 20px;
+    transition: color 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+
+.user-details .input-box input::placeholder {
+    color: #8860D0;
+}
+
+.user-details .date input::placeholder {
+    color: #8860D0;
+}
+
+.user-details .input-box input:focus {
+    color: #84CEEB;
+    border-color: #84CEEB; 
+}
+
+.user-details .date input:focus {
+    color: #84CEEB;
+    border-color: #84CEEB; 
+}
+
+.editModal-content button[type="submit"],
+.editModal-content button {
+    width: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: #8860D0;
+    padding: 10px 10px;
+    font-size: 14px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.editModal-content button[type="submit"]:hover {
+    background: #5AB9EA;
+    transition: .3s ease;
+}
+
+/*========================== IT END REGISTER ACCOUNT ======================*/
+.container {
+    width: 100%;
+    max-width: 950px;
+    border-radius: 10px;
+    background: #FFF;
+    border: 1px solid #8860D0;
+    padding: 50px 30px;
+    box-sizing: border-box;
+    margin: 50px auto;
+    margin-left: 90px;
+}
+
+.container .logo {
+    width: 60%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.container h1 {
+    line-height: 2;
+    text-align: center;
+    color: #8860D0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+form .user-details .input-box {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto; 
+}
+
+.user-details .input-box .details {
+    font-size: 14px;
+    color: #8860D0;
+}
+
+.user-details .input-box input {
+    width: 100%;
+    height: 80%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #8860D0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #8860D0;
+    padding: 10px 20px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.user-details .input-box input::placeholder {
+    color: #8860D0;
+}
+
+.user-details .input-box input:focus {
+    color: #84CEEB;
+    border-color: #84CEEB; 
+}
+
+.create-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    width: 130px;
+    margin-top: 50px;
+    font-size: 16px;
+    background-color: #8860D0;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.create-button:hover {
+    background-color: #84CEEB;
+}
+
+.styled-select {
+    position: relative;
+    display: inline-block;
+}
+
+.styled-select select {
+    display: inline-block;
+    padding: 8px;
+    width: 300px;
+    height: 45px;
+    border: 1px solid #8860D0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.styled-select select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+
+/*========================== RESPONSIVENESS ======================*/
+@media screen and (max-width: 2560px) {
+  .dashboard img{
+    width: 110%;
+    
+    padding-left: 90px;
+  }
+  table {
+    max-width: 2000px;
+    font-size: 15px;
+    margin: 0 10px 0 20px;
+    
+    
+}
+ 
+  
+} /*merge*/

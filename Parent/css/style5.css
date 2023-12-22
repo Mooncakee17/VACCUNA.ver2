@@ -1,0 +1,68 @@
+/*===================== cHILD DATA ======================*/
+.data-board {
+    position: relative;
+}
+
+.data-board img {
+    padding: 8px 85px;
+    width: 1500px;
+    
+    
+}
+
+.data-board-text {
+    position: absolute;
+    top: 100px;
+    padding: 25px 113px;
+}
+
+.data-board h1 {
+    color: rgb(64, 108, 230);
+    text-shadow: 0px 0px 3px rgba(101, 53, 113, 0.5);
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Style the select element */
+.form-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style the row and columns */
+.row {
+    margin: 10px 0;
+}
+
+.col-lg-1, .col-lg-8 {
+    /* Adjust the width as needed */
+    width: 15%;
+}
+
+.col-lg-3 {
+    width: 70%;
+}
+
+/* Style the disabled option in the select */
+.form-select option[disabled] {
+    color: #999; /* You can adjust the color */
+}
+
+/* Style the options in the select */
+.form-select option {
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Style the selected option */
+.form-select option:checked {
+    background-color: #007bff; /* Change to the desired color */
+    color: #fff;
+}

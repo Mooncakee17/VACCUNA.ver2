@@ -1,0 +1,169 @@
+
+
+.container {
+    display: flex; /* Use flexbox */
+}
+
+.column {
+   position: absolute;
+   left: 270px;
+   right: 50px;
+   
+   
+}
+
+.column1{
+    position: fixed;
+    height: 100%;
+}
+
+.dashboard {
+    position: relative;
+}
+
+.dashboard img {
+    padding: 8px 85px;
+    width: 1500px;
+    flex-shrink: 0;
+    
+}
+
+.dashboard-text {
+    position: absolute;
+    top: 100px;
+    padding: 25px 113px;
+}
+
+.dashboard-text h1 {
+    color: whitesmoke;
+    text-shadow: 0px 0px 3px rgba(101, 53, 113, 0.5);
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* Profile Style */
+.content{
+    display: flex;
+    background-color: aqua;
+    margin: 0 0px 0 100px;
+    width: 90%;
+    max-width: 1500px;
+    min-height: 500px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 0 4px rgba(142, 5, 196, 0.849);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.profile-pic {
+    padding: 20px 30px 0 20px;
+    margin: 0 30px 0 0px;
+    max-width: 350px;
+    min-height: 400px;
+    border-right: 2px solid #8860D0;
+    text-align: center;
+}
+.profile-pic img {
+    border-radius: 100px;
+    border: 10px solid #8860D0;
+    width: 200px;
+    height: 200px;
+}
+
+.profile-pic h2 {
+    text-align: center;
+    margin-top: 20px;
+   
+}
+
+.profile-pic h4 {
+    text-align: center;
+    color: #8860D0;
+}
+
+
+/* Edit Profile Pic Style */
+
+.profile-pic .rightround{
+    position: absolute;
+    right: 1050px;
+    top: 470px;
+    width: 43px;
+    height: 40px;
+    background-color: rgb(84, 166, 243);
+    line-height: 52px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+}
+
+.profile-pic .leftround{
+    position: absolute;
+    left: 160px;
+    top: 470px;
+    width: 43px;
+    height: 40px;
+    background-color: rgb(243, 84, 84);
+    line-height: 54px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+
+}
+.profile-pic .span{
+    
+}
+
+.profile-pic input{
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+}
+
+.profile-pic input::-webkit-file-upload-button, .profile-pic input[type=submit]{
+    cursor: pointer;
+}
+/* Edit Profile details Style */
+
+.profile-details{
+    margin-left: 20px;
+    max-width: 1000px;
+    min-height: 400px;
+}
+.profile-details h4 {
+    margin-top: 20px;
+    color: #8860D0;
+}
+.btn{
+    width: 50%;
+    width: 200px;
+    height: 45px;
+    background: #8860D0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    margin: 20px auto; 
+}
+
+.profile-details .btna {
+   text-align: center;
+  
+   margin-top: 70px;
+   margin-left: 650px;
+}
+
+
+/*========================== RESPONSIVENESS ======================*/
+@media screen and (max-width: 2560px) {
+  .dashboard img{
+    width: 110%;
+  }
+
+}

@@ -1,0 +1,663 @@
+
+
+.container1 {
+    display: flex; /* Use flexbox */
+    text-decoration: none;
+}
+
+.column {
+   position: absolute;
+   left: 270px;
+   right: 50px;
+   
+}
+
+.column1{
+    position: fixed;
+    height: 100%;
+}
+
+.dashboard {
+    position: relative;
+}
+
+.dashboard img {
+    padding: 8px 85px;
+    width: 1500px;
+    
+    
+}
+
+.dashboard-text {
+    position: absolute;
+    top: 100px;
+    padding: 25px 113px;
+}
+
+.dashboard-text h1 {
+    color: whitesmoke;
+    text-shadow: 0px 0px 3px rgba(101, 53, 113, 0.5);
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* Profile Style */
+
+
+
+/*========================== RESPONSIVENESS ======================*/
+@media screen and (max-width: 2560px) {
+  .dashboard img{
+    width: 110%;
+  }
+
+}
+
+/*========================== DASHBOARD ======================*/
+.Notif-table {
+    width: 100%;
+    padding: 50px 30px;
+    margin-left: 50px;
+}
+
+#NotifTable_section {
+    height: 480px;
+    overflow: auto;
+}
+
+.Notif-table table {
+    width: 100%;
+    table-layout: fixed;
+    max-width: 1300px;
+    min-width: 900px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.Notif-table a {
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 6px;
+    color: #ffffff;
+    transition: .3s ease;
+}
+
+.Notif-table td button {
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 8px 9px;
+    color: #ffffff;
+    transition: .3s ease;
+}
+
+.Notif-table td a:nth-child(1) {
+    background-color: #5AB9EA;
+}
+
+.Notif-table td a:hover {
+    background-color: #C1C8E4;
+    transition: .3s ease;
+}
+
+.Notif-table .btn:hover {
+    background: #8860D0;
+    cursor: pointer;
+}
+
+.NotifTable_section thead th {
+    position: sticky;
+    top: 0;
+    background-color: #5680E9;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.NotifTable_section thead th:nth-child(1) {
+    border-radius: 10px 0 0 0;
+}
+
+.NotifTable_section thead th:nth-child(2) {
+    border-radius: 0 10px 0 0;
+}
+
+th, td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 5px;
+    word-break: break-all;
+    text-align: center;
+}
+
+.Notif-table thead th:nth-child(1),
+.Notif-table tbody td:nth-child(1) {
+    width: 100%;
+}
+
+.Notif-table thead th:nth-child(2),
+.Notif-table tbody td:nth-child(2) {
+    width: 18%;
+}
+
+.Notif-table tbody td:nth-child(1) {
+    text-align: left; 
+    display: flex;
+    align-items: center;
+}
+
+tr:hover {
+    color: #5AB9EA;
+    cursor: pointer;
+    background-color: #F6F9FC;
+}
+
+tr:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.notification-text strong {
+    font-weight: bold;
+}
+
+.NotifTable_section img {
+    width: 196px; 
+    height: auto; 
+}
+
+/*========================== CHILD REGISTRATION PAGE ======================*/
+.container {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 0 4px rgba(142, 5, 196, 0.849);
+    padding: 50px 30px;
+    box-sizing: border-box;
+    margin: 50px auto;
+}
+
+.container h2 {
+    line-height: 2;
+    text-align: center;
+    color: #8860D0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+form .user-details .input-box {
+    width: 100%;
+    max-width: 294px;
+    margin: 20px auto; 
+}
+
+form .user-details .date {
+    width: 100%;
+    max-width: 294px;
+    margin: 20px auto; 
+}
+
+.user-details .input-box .details {
+    font-size: 14px;
+    color: #8860D0;
+}
+
+.user-details .date .details {
+    font-size: 14px;
+    color: #8860D0;
+}
+
+.user-details .input-box input {
+    width: 100%;
+    height: 80%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #8860D0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #8860D0;
+    padding: 10px 20px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.user-details .date input {
+    width: 100%;
+    height: 80%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #8860D0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #8860D0;
+    padding: 10px 20px;
+    transition: color 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+
+.user-details .input-box input::placeholder {
+    color: #8860D0;
+}
+
+.user-details .date input::placeholder {
+    color: #8860D0;
+}
+
+.user-details .input-box input:focus {
+    color: #84CEEB;
+    border-color: #84CEEB; 
+}
+
+.user-details .date input:focus {
+    color: #84CEEB;
+    border-color: #84CEEB; 
+}
+
+/*========================== CHILD REGISTRATION PAGE QUESTIONS ======================*/
+form .question-box {
+    margin-top: 30px;
+    
+}
+.question-box .btn1{
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 57px;
+    border-radius: 5px;
+    background-color: #8860D0;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+    color: #ffffff;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+.question-box p{
+    color: #8860D0;
+    font-size: 18px;
+}
+
+.question-box h3 {
+    font-size: 20px;
+    color: #8860D0;
+}
+
+.question-box h2 {
+    font-weight: lighter;
+    color: #8860D0;
+}
+
+
+.question-box h4 {
+    font-size: 18px;
+    color: #8860D0;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+.question-box span{
+    font-size: 17px;
+    color: #8860D0;
+    font-style: italic;
+}
+.question-box label {
+    font-size: 17px;
+    color: #8860D0;
+    margin-bottom: 8px;
+}
+form .question-option{
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #8860D0;
+    padding: 20px 10px 20px 20px;
+    box-sizing: border-box;
+}
+form :where(.question-option, .question) {
+    align-items: center;
+    column-gap: 50px;
+    font-size: 14px;
+    color: #8860D0;
+    
+}
+
+form .question {
+    column-gap: 5px;
+    margin-bottom: 5px;
+}
+
+.question-box .date input[type="date"] {
+    color: #5680E9;
+    border: 2px solid #5680E9;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+form :where(.question input, .question label) {
+    cursor: pointer;
+}
+
+form .btn {
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    background-color: #84CEEB;
+    cursor: pointer;
+    padding: 10px;
+    color: #ffffff;
+    margin-left: 710px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    
+}
+
+form .btn:hover {
+    background: #8860D0;
+    cursor: pointer;
+}
+
+/*========================== DASHBOARD ======================*/
+.d-board {
+    position: relative;
+}
+
+.d-board img {
+    padding: 8px 85px;
+    width: 1500px;
+    
+    
+}
+
+.d-board-text {
+    position: absolute;
+    top: 100px;
+    padding: 25px 113px;
+}
+
+.d-board h1 {
+    color: rgb(48, 95, 223);
+    text-shadow: 0px 0px 3px rgba(101, 53, 113, 0.5);
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/*========================== APPOINTMENT ======================*/
+.appt-board {
+    position: relative;
+}
+
+.appt-board img {
+    padding: 8px 85px;
+    width: 1500px; 
+}
+
+.appt-board-text {
+    position: absolute;
+    top: 100px;
+    padding: 25px 113px;
+}
+
+.appt-board h1 {
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 3px rgba(101, 53, 113, 0.5);
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.Appt-table {
+    width: 100%;
+    padding: 50px 30px;
+    margin-left: 70px;
+    margin-top: -30px;
+}
+
+.table_section {
+    height: 400px;
+    overflow: auto;
+}
+
+.Appt-table table {
+    width: 100%;
+    table-layout: fixed;
+   width: 1300px;
+    min-width: 900px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: none;
+    font-size:larger;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+    
+}
+
+.Appt-table button {
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 6px;
+    color: #ffffff;
+    transition: .3s ease;
+}
+
+td button:nth-child(1) {
+    background-color: #8860D0;
+}
+
+td button:nth-child(2) {
+    background-color: #f50b0b;
+}
+
+td button:hover {
+    background-color: #C1C8E4;
+    transition: .3s ease;
+}
+
+.table .btn:hover {
+    background: #8860D0;
+    cursor: pointer;
+}
+
+.ApptTable_section thead th {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background-color: #5AB9EA;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.ApptTable_section thead th:nth-child(1) {
+    border-radius: 10px 0 0 0;
+}
+
+.ApptTable_section thead th:nth-child(7) {
+    border-radius: 0 10px 0 0;
+}
+
+th, td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 5px;
+    word-break: break-all;
+    text-align: center;
+}
+
+tr:hover td {
+    color: #5AB9EA;
+    cursor: pointer;
+    background-color: #F6F9FC;
+}
+
+.SetAppt-Button {
+    margin-top: 15px;
+    margin-left: 100px;
+}
+
+.SetAppt-Button button {
+    padding: 10px;
+    background-color: #8860D0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.SetAppt-Button button:hover {
+    background-color: #7939EC;
+}
+
+/*========================== CHILD DATA ======================*/
+.data-board {
+    position: relative;
+}
+
+.data-board img {
+    padding: 8px 85px;
+    width: 1500px;
+    
+    
+}
+
+.data-board-text {
+    position: absolute;
+    top: 100px;
+    padding: 25px 113px;
+}
+
+.data-board h1 {
+    color: rgb(64, 108, 230);
+    text-shadow: 0px 0px 3px rgba(101, 53, 113, 0.5);
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Style the select element */
+.form-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style the row and columns */
+.row {
+    margin: 10px 0;
+}
+
+.col-lg-1, .col-lg-8 {
+    /* Adjust the width as needed */
+    width: 15%;
+}
+
+.col-lg-3 {
+    width: 70%;
+}
+
+/* Style the disabled option in the select */
+.form-select option[disabled] {
+    color: #999; /* You can adjust the color */
+}
+
+/* Style the options in the select */
+.form-select option {
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Style the selected option */
+.form-select option:checked {
+    background-color: #007bff; /* Change to the desired color */
+    color: #fff;
+}
+/*========================== VIEW CHILD ======================*/
+.appt-board {
+    position: relative;
+}
+
+.appt-board img {
+    padding: 8px 85px;
+    width: 1500px;
+    
+    
+}
+
+.appt-board-text {
+    position: absolute;
+    top: 100px;
+    padding: 25px 113px;
+}
+
+.appt-board h1 {
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 3px rgba(101, 53, 113, 0.5);
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media screen and (min-width: 2560px) and (min-height: 1140px) {
+  /* Your CSS styles for 2560 x 1140 screens here */
+  .Appt-table table {
+    width: 100%;
+    table-layout: fixed;
+    width: 1300px;
+    min-width: 900px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+    
+}
+
+}
+@media screen and (min-width: 1600px) and (min-height: 900px) {
+  /* Your CSS styles for 2560 x 1140 screens here */
+  .Appt-table table {
+    width: 100%;
+    table-layout: fixed;
+    width: 1300px;
+    min-width: 900px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+    
+}
+
+}
+
+

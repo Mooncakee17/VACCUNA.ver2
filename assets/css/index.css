@@ -1,0 +1,591 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: .2s linear;
+    list-style: none;
+}
+
+html, body {
+    display: grid;
+    height: 100%; 
+    scroll-behavior: smooth; 
+    text-decoration: none;
+}
+
+/* ----  NAV BAR  ---- */
+.header .logo{
+    width: 100%;
+    max-width: 200px;
+    max-height: 100px;
+    margin:0 0 10px;
+}
+
+.navbar{
+    display: block;
+    background-color: #FFF;
+    padding: 0 70px 0 ;
+    font-weight: bold;
+    box-shadow: 6px 6px 8px 5px rgba(0, 0, 0, 0.25);
+}
+.navbar .a{
+    display: inline-block;
+    line-height: 80px;
+    justify-content: center;
+    
+}
+
+nav ul{
+    float: right;
+    margin: auto;
+    font-size: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+}
+
+nav ul li:nth-child(4){
+    margin-right: 20px ;
+}
+
+nav ul li a{
+    padding: 2px 7px 7px 2px;
+    color: #8860D0;
+    margin-right: 5px;
+}
+
+.navbar .btn{
+    border: 3px solid #5AB9EA;
+    border-radius: 40px;
+    font-size: medium;
+    margin-left: 20px;
+    padding: 10px 50px 10px 50px;   
+}
+
+.navbar .btn-signup{
+    background-color: #5AB9EA;
+    border: 3px solid #5AB9EA;
+    font-size: medium;
+    color: #FFF;
+    border-radius: 40px;
+    padding: 10px 50px 10px 50px;
+}
+
+.btn-signup:hover{
+    background:#5680E9;
+    color: #ffffff;
+}
+
+nav ul li a:hover{
+    border-bottom: 3px solid #8860D0;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color:#8860D0;
+    position:fixed;
+    margin: 20px 400px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+
+}
+
+/* ----  HERO SECTION--- */
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url(/assets/images/homepage.JPG);
+    background-size: cover;
+    object-fit: contain;  
+}
+
+.column1 {
+    margin-left: 50px;
+}
+
+.column1 h1{
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: #FFF;
+}
+
+.column1 p{
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #FFF;
+}
+
+.column1 button{
+    width: 100%;
+    max-width: 200px;
+    height: 70px;
+    padding: 0 20px 0 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 3px solid #84CEEB;
+    border-radius: 30px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin: 20px auto;   
+}
+
+.column2 img{
+    width: 700px;
+}
+
+.column1 button:hover{
+    background:#5680E9;
+    color: #ffffff;
+}
+
+/* ----  About --- */
+.about {
+    margin-top: 60px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .main img {
+    width: 680px;
+    max-width: 100%;
+    height: auto;
+    padding: 0 5px;
+    margin-left: -20px;
+}
+
+.all-text {
+    width: 600px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.main {
+    width: 1290px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.all-text h4 {
+    font-size: 20px;
+    color: #777777;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.all-text h1 {
+    font-size: 30px;
+    color: #8860D0;
+    text-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.all-text p {
+    font-size: 16px;
+    color: #777777;
+    line-height: 30px;
+    margin-bottom: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* ----  CONTACT US  ---- */
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(/assets/images/contactUs1.png);
+    background-size: cover;
+}
+
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #ffffff;
+    text-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contact .content p {
+    font-weight: 300;
+    color: #ffffff;
+    text-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.container .contactInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon {
+    color: #84CEEB;
+    min-width: 60px;
+    height: 60px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contactInfo .box .text h3 {
+    font-weight: 500;
+    color: #84CEEB;
+}
+
+/* ----  FAQs --- */
+.container-fluid {
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.container-fluid h2 {
+    color: #5680E9;
+    position: relative;
+    width: 50rem;
+    font-size: 40px;
+}
+
+.container-fluid h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 128px;
+    width: 85px;
+    height: 2px;
+    background-color: #5680E9;
+}
+
+.accordion {
+    width: 100%;
+    padding: 10px 10px;
+    border: 2px solid #5AB9EA;
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.accordion .icon {
+    margin: 0 10px 0 0;
+    width: 30px;
+    height: 30px;
+    background: url(/assets/images/PlusMath.png) no-repeat 4px 4px #5AB9EA;
+    border-radius: 50%;
+    float: left;
+    transition: all .5s ease-in;
+}
+
+.accordion h5 {
+    font-size: 20px;
+    margin: 0;
+    padding: 3px 0 0 0;
+    font-weight: normal;
+    color: #5680E9;
+    transition: all .5s ease-in;
+}
+
+.active .icon {
+    background: url(/assets/images/Minus.png) no-repeat 4px 4px #ffffff;
+}
+
+.active {
+    background-color: #5AB9EA;
+    color: #ffffff;
+}
+
+.active h5 {
+    color: #ffffff;
+}
+
+.panel {
+    padding: 0 15px;
+    border-left: 1px solid #5AB9EA;
+    margin-left: 25px;
+    font-size: 14px;
+    text-align: justify;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .5s ease in;
+}
+
+/* ----  VACCINE INFO --- */
+.table {
+    width: 100%;
+    padding: 50px 30px;
+    margin-top: 30px;
+}
+
+.table-title {
+    display: flex;
+    align-items: center;
+}
+
+.table-title img {
+    width: 100px;
+    height: auto;
+}
+
+.table-title h5 {
+    color: #5AB9EA;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.table_section {
+    height: 850px;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    max-width: 1300px;
+    min-width: 900px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+    border-right: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #8860D0;
+    color: #ffffff;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+thead th:nth-child(1) {
+    border-radius: 10px 0 0 0;
+}
+
+thead th:nth-child(5) {
+    border-radius: 0 10px 0 0;
+}
+
+th, td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    word-break: break-all;
+    text-align: center;
+}
+
+tr:hover td {
+    color: #5AB9EA;
+    cursor: pointer;
+    background-color: #F6F9FC;
+}
+
+.table-info {
+    background: linear-gradient(180deg, #5AB9EA 0%, #8860D0 57.54%);
+    padding: 40px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.table-info p {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* ----  FOOTER --- */
+footer {
+    position: relative;
+    width: 100%;
+    background: #8860D0;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 250px;
+}
+
+footer .social-icon, 
+footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .social-icon li a {
+    font-size: 2em;
+    color: #ffffff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social-icon li a:hover {
+    transform: translateY(-10px);
+}
+
+footer .menu li a {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(/assets/images/wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_02 {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .about{
+        width: 100%;
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .all-text {
+        text-align: center;
+        margin: 40px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .about .main img {
+        margin-bottom: 35px;
+    }
+
+    .all-text h1 {
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+}
+

@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Route requests to Homepage/Index.php if the URL is empty
+    RewriteRule ^$ Index.php [L]
+
+    # Exclude existing files and directories from redirection
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ Index.php [L]
+</IfModule>

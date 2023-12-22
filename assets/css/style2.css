@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    height: 100%;
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    background: white;
+    background-size: cover; /* Adjust the background size */
+    background-repeat: no-repeat;
+    background-position: center center;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.dash-container{
+    display: grid;
+    width: 96%;
+    
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+ aside{
+    height: 100vh;
+    width: 150%;
+    background: linear-gradient(180deg, #5AB9EA 0%, #8860D0 57.03%);
+    background-size: cover; /* Adjust the background size */
+    background-repeat: no-repeat;
+    background-position: center center;
+ }
+
+ aside .top{
+ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.4rem;
+ }
+
+ aside .close
+{
+    display: none;
+}
+
+/*========================== SIDE BARD======================*/
+
+aside .sidebar{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+
+}
+
+aside h3{
+    font-weight: 400;
+}
+aside .sider-bar a {
+    color: aliceblue;
+    display: flex;
+    margin: 15px; margin-left: 30px;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 2.7rem;
+    transition: all 300ms ease;
+}
+
+aside .sider-bar a span{
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+aside .sider-bar a:last-child{
+    position: absolute;
+    bottom: 0.5rem;
+    width: 100%;
+}
+
+
+ aside .sider-bar a:hover{
+    color: whitesmoke;
+    font-size: 17px;
+ }
+
+ aside .sider-bar a:hover span{
+    margin-left: 1rem;
+    
+ }
+ 

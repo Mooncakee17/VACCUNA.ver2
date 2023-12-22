@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0 ;
+    outline: 0 ;
+    appearance: none ;
+    border: 0 ;
+    text-decoration: none ;
+    list-style: none ;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    height: 100%;
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    background: white;
+    background-size: cover; /* Adjust the background size */
+    background-repeat: no-repeat;
+    background-position: center center;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.dash-container{
+    display: grid;
+    width: 96%;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+ aside{
+    height: 100vh;
+    width: 150%;
+    background: linear-gradient(180deg, #5AB9EA 0%, #8860D0 57.03%);
+    background-size: cover; /* Adjust the background size */
+    background-repeat: no-repeat;
+    background-position: center center;
+ }
+
+ aside .top{
+ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.4rem;
+ }
+
+ aside .close
+{
+    display: none;
+}
+
+.right .top button {
+    display: none;
+}
+
+/*========================== SIDE BARD======================*/
+
+aside .sidebar{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+
+}
+
+aside h3{
+    font-weight: 400;
+}
+aside .sider-bar a {
+    color: aliceblue;
+    display: flex;
+    margin-left: 30px;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 2.7rem;
+    transition: all 300ms ease;
+}
+
+aside .sider-bar a span{
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+aside .sider-bar a:last-child{
+    position: absolute;
+    bottom: 0.5rem;
+    width: 100%;
+}
+
+aside .sider-bar a.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    margin-left: 0;
+}
+
+aside .sider-bar a.active:before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: #ffffff;
+}
+aside .sider-bar a.active span{
+    color: #ffffff;
+    margin-left: calc(1rem - 8px);
+}
+
+aside .sider-bar a:hover{
+    color: whitesmoke;
+    font-size: 17px;
+}
+
+ aside .sider-bar a:hover span{
+    margin-left: 1rem;
+    
+}
+
+.dashboard {
+    position: relative;
+}
+
+.dashboard img {
+    padding: 8px 85px;
+    width: 1500px;
+    flex-shrink: 0;
+}
+
+.dashboard-text {
+    position: absolute;
+    top: 100px;
+    padding: 25px 113px;
+}
+
+h1 {
+    color: #FFF;
+    text-shadow: 5px 6px 2px rgba(0, 0, 0, 0.50);
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.bg-violet{
+    background-color:violet !important;
+}
+.fs-violet{
+    color:violet !important;
+}
+
+
+/*========================== VIEW CHILD DATA ======================*/
+.underlined-text {
+    margin-top: 30px;
+}
+
+.underlined-text .info-line {
+    display: flex;
+    text-align: justify;
+    margin: 10px 10px auto;
+}
+  
+.underlined-text .info-block {
+    flex: 1;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+  
+.label {
+    font-weight: bold;
+}
+
+.table {
+    width: 100%;
+    padding: 50px 30px;
+}
+
+.table_section {
+    height: 420px;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    max-width: 1000px;
+    min-width: 900px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.table button {
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    background-color: #84CEEB;
+    cursor: pointer;
+    padding: 10px;
+    color: #ffffff;
+    transition: .3s ease;
+}
+
+.table .btn:hover {
+    background: #8860D0;
+    cursor: pointer;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #5AB9EA;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+thead th:nth-child(1) {
+    border-radius: 10px 0 0 0;
+}
+
+thead th:nth-child(4) {
+    border-radius: 0 10px 0 0;
+}
+
+th, td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    word-break: break-all;
+    text-align: center;
+}
+
+tr:hover td {
+    color: #5AB9EA;
+    cursor: pointer;
+    background-color: #F6F9FC;
+}
+
+.modal {
+    padding: 1em;
+    width: 650px;
+    height: 550px;
+    margin-left: 500px;
+    margin-top: 50px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.modal::backdrop {
+    background: linear-gradient(180deg, #5AB9EA 0%, #8860D0 57.03%);
+    opacity: .4;
+}
+
+.header {
+    height: 75px;
+    background: #8860D0;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+}
+
+.title {
+    height: 45px;
+    background: #C1C8E4;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+    margin-top: 20px;
+}
+
+.header h2 {
+    color: white;
+    padding-top: 15px;
+    padding-left: 10px;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.title h2 {
+    color: black;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.content p {
+    padding-top: 10px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button {
+    border: none;
+    border-radius: 10px;
+    background: #8860D0;
+    color: #ffffff;
+    padding: 8px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #5AB9EA;
+    transition: .3s ease;
+}
+
+.close-button {
+    margin-top: 20px;
+    margin-left: 500px;
+    width: 100px;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #8860D0);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, #5AB9EA);
+}
+/*========================== RESPONSIVENESS ======================*/
+@media screen and (max-width: 1200px) {
+    .dash-container {
+        width: 94%;
+        grid-template-columns: 3.8rem auto 23rem;
+    }
+
+    aside .logo {
+        display: none;
+    }
+    
+    aside h3 {
+        display: none;
+    }
+
+    aside .sider-bar a {
+        width: 5.6rem;
+    }
+
+    aside .sider-bar a:last-child {
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .dash-container {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        position: fixed;
+        left: -100%;
+        background: linear-gradient(180deg, #5AB9EA 0%, #8860D0 57.03%);
+        width: 18rem;
+        z-index: 3;
+        height: 100vh;
+        padding-right: 1.8rem;
+        display: none;
+        animation: showMenu 400ms ease forwards;
+    }
+
+    @keyframes showMenu {
+        to{
+            left: 0;
+        }
+    }
+
+    aside .logo {
+        display: inline;
+    }
+    
+    aside h3 {
+        display: inline;
+    }
+
+    aside .sider-bar a {
+        width: 18rem;
+        height: 3.4rem;
+    }
+
+    aside .sider-bar a:last-child {
+        position: absolute;
+        margin-top: 1rem;
+    }
+
+    aside .close {
+        display: inline-block;
+        cursor: pointer;
+        color:#8860D0;
+    }
+
+    .right .top button {
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: #8860D0;
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+    }
+}
