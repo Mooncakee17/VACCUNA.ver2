@@ -1,11 +1,11 @@
-<?php include('../templates/Header.php'); ?>
+
 <link rel="stylesheet" href="./css/style5.css">
 <link rel="stylesheet" href="./css/calendar-style.css">
 
 <body>
 <div class="container1">
         <div class="column1">
-          <?php include('../templates/Admin-Dash.php'); ?> <!------------call side bar template------------>
+          <?php include('../templates/Doctor-Dash.php'); ?> <!------------call side bar template------------>
         </div>
 
         <div class="column">

@@ -2,8 +2,8 @@
 
 // Database configuration
 $host = "localhost";
-$username = "u621398810_Vaccuna";
-$password = "Vaccuna.23";
+$username = "root";
+$password = "";
 $database = "u621398810_Vaccunadb_v1";
 
 // Create connection
