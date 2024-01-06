@@ -24,7 +24,7 @@
                 </a>
 
 
-                <a href="#">
+                <a href="Profile-TAB.php">
                 <span class="material-icons-sharp">person</span>
                 <h3>Profile</h3>
                 </a>

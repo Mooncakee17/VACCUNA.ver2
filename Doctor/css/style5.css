@@ -866,6 +866,67 @@ table {
     border-bottom: 1px solid #000; 
     width: 100px;
 }
+
+/*========================== PROFILE TAB DOCTOR SIDE ======================*/
+.content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 2% auto;
+    margin-left: 90px;
+    padding: 1em;
+    width: 950px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.header {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    height: 75px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    background: #C1C8E4;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+    margin-top: 20px;
+}
+
+.header h2 {
+    color: black;
+    padding-top: 15px;
+    padding-left: 10px;
+    font-size: 30px;
+    margin: 0;
+}
+
+.header img {
+    width: 121px; /* Adjust the width of the image as needed */
+    height: auto; /* Maintain the aspect ratio */
+    margin-left: 560px; /* Add some space between the image and the text */
+}
+
+.content span {
+    font-weight: bold;
+}
+
+.content p {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    font-size: 14px;
+    text-align: justify;
+    color: black;
+}
+
+
 /* Main cause
 .box{
     text-align: left;
