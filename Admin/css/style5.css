@@ -51,7 +51,9 @@
     flex-wrap: wrap;
 }
 
-.values .val-box {
+.values .val-box-vaccine-stocks,
+.values .val-box-administered-vaccines,
+.values .val-box-appointment-today {
     width: 300px;
     padding: 16px 20px;
     border-radius: 10px;
@@ -59,21 +61,24 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    cursor: pointer;
 }
 
-.values .val-box:nth-child(1) {
+.values .val-box-vaccine-stocks {
     background: #5680E9;
 }
 
-.values .val-box:nth-child(2) {
+.values .val-box-administered-vaccines {
     background: #5AB9EA;
 }
 
-.values .val-box:nth-child(3) {
+.values .val-box-appointment-today {
     background: #8860D0;
 }
 
-.values .val-box i {
+.values .val-box-vaccine-stocks i,
+.values .val-box-administered-vaccines i,
+.values .val-box-appointment-today i {
     font-size: 35px;
     width: 60px;
     height: 60px;
@@ -83,30 +88,178 @@
     margin-right: 15px;
 }
 
-.values .val-box:nth-child(1) i{
+.values .val-box-vaccine-stocks i{
     color: #5680E9;
     background: #ffffff;
 }
 
-.values .val-box:nth-child(2) i{
+.values .val-box-administered-vaccines i{
     color: #5AB9EA;
     background: #ffffff;
 }
 
-.values .val-box:nth-child(3) i{
+.values .val-box-appointment-today i{
     color: #8860D0;
     background: #ffffff;
 }
 
-.values .val-box h3 {
+.values .val-box-vaccine-stocks h3,
+.values .val-box-administered-vaccines h3,
+.values .val-box-appointment-today h3 {
     font-size: 18px;
     font-weight: 600;
     color: #ffffff;
 }
 
-.values .val-box span {
+.values .val-box-vaccine-stocks span,
+.val-box-administered-vaccines span,
+.val-box-appointment-today span {
     font-size: 15px;
     color: #c6c6c6;
+}
+
+.vaccine-table,
+.administered-table,
+.appointment-table {
+    display: none; /* Initially hide the vaccine table */
+}
+
+.vaccine-table {
+    width: 1000px;
+    margin-top: 1050px;
+    margin-left: 400px;
+}
+
+.vaccine-table table {
+    margin: 30px auto;
+    max-width: 1000px;
+    min-width: 900px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.vaccine-table-section thead th {
+    position: sticky;
+    top: 0;
+    background-color: #5680E9;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.vaccine-table-section thead th:nth-child(1) {
+    border-radius: 10px 0 0 0;
+}
+
+.vaccine-table-section thead th:nth-child(2) {
+    border-radius: 0 10px 0 0;
+}
+
+.vaccine-table-section th, td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 5px;
+    word-break: break-all;
+    text-align: center;
+}
+
+.vaccine-table-section tr:hover td {
+    color: #5AB9EA;
+    cursor: pointer;
+    background-color: #F6F9FC;
+}
+
+.administered-table {
+    width: 1000px;
+    margin-top: 1050px;
+    margin-left: 400px;
+}
+
+.administered-table table {
+    margin: 30px auto;
+    max-width: 1000px;
+    min-width: 900px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.administered-table-section thead th {
+    position: sticky;
+    top: 0;
+    background-color: #5AB9EA;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.administered-table-section thead th:nth-child(1) {
+    border-radius: 10px 0 0 0;
+}
+
+.administered-table-section thead th:nth-child(2) {
+    border-radius: 0 10px 0 0;
+}
+
+.administered-table-section th, td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 5px;
+    word-break: break-all;
+    text-align: center;
+}
+
+.administered-table-section tr:hover td {
+    color: #5AB9EA;
+    cursor: pointer;
+    background-color: #F6F9FC;
+}
+
+.appointment-table {
+    width: 1000px;
+    margin-top: 1050px;
+    margin-left: 400px;
+}
+
+.appointment-table table {
+    margin: 30px auto;
+    max-width: 1000px;
+    min-width: 900px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.appointment-table-section thead th {
+    position: sticky;
+    top: 0;
+    background-color: #8860D0;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.appointment-table-section thead th:nth-child(1) {
+    border-radius: 10px 0 0 0;
+}
+
+.appointment-table-section thead th:nth-child(4) {
+    border-radius: 0 10px 0 0;
+}
+
+.appointment-table-section th, td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 5px;
+    word-break: break-all;
+    text-align: center;
+}
+
+.appointment-table-section tr:hover td {
+    color: #5AB9EA;
+    cursor: pointer;
+    background-color: #F6F9FC;
 }
 
 
