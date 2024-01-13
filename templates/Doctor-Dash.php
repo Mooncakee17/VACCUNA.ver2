@@ -29,7 +29,7 @@
                 <h3>Profile</h3>
                 </a>
 
-                <a href="Doctor-Appointment-TAB.php">
+                <a href="Appointment-TAB.php">
                 <span class="material-icons-sharp">schedule_send</span>
                 <h3>Appointments</h3>
                 </a>

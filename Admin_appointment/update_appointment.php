@@ -30,6 +30,32 @@ else{
 	}
 
 
+
+
+
+	$select = mysqli_query($conn, "SELECT *  FROM vaccineinventory WHERE vacid = $vacid ") or die('query failed');
+	$stock_count = mysqli_fetch_all($select, MYSQLI_ASSOC);
+	$date_today = date ('Y-m-d');
+	$exp_date = ['exp_date'];
+	$batch_no +=1;
+	foreach($stock_count as $value){
+		$count = $value['stocks'];
+		$batch_no = $value['batch_no'];
+
+	}
+	
+	$new_batch_no = $batch_no +=1;
+
+	if ($count < 1 || $date_today >= $exp_date) {
+		$sql1 = "UPDATE vaccineinventory SET stocks = 2, batch_no = $new_batch_no WHERE vacid = $vacid";
+		mysqli_query($conn, $sql);
+		$result = 'success';
+	}
+
+
+	
+
+
 	//Get the current count of selected vaccine
 	$select = mysqli_query($conn, "SELECT stocks, administered  FROM vaccineinventory WHERE vacid = $vacid ") or die('query failed');
 	$stock_count = mysqli_fetch_all($select, MYSQLI_ASSOC);

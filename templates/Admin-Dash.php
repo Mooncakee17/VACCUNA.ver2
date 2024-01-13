@@ -32,11 +32,6 @@
                 <h7 style =" font-size: 15.5px;">Appointments</h7>
                 </a>
 
-                <a href="Calendar-TAB.php" style="text-decoration: none;">
-                <span class="material-icons-sharp">calendar_month</span>
-                <h7 style =" font-size: 15.5px;">Calendar</h7>
-                </a>
-
                 <a href="VaccineInventory-TAB.php" style="text-decoration: none;">
                 <span class="material-icons-sharp">vaccines</span>
                 <h7 style =" font-size: 15.5px;">Vaccine Records</h7>

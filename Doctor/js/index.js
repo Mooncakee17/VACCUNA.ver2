@@ -40,7 +40,7 @@ function update_appointment(){
             for_reason:for_reason
         },
         success:function(result){
-                window.location.href="../Admin/Appointment-TAB.php";
+                window.location.href="../Doctor/Appointment-TAB.php";
         },
         error:function(error){
 
@@ -70,7 +70,7 @@ function missed_appointment(){
             vacid: vacid,
         },
         success:function(result){
-            window.location.href="../Admin/Appointment-TAB.php";
+            window.location.href="../Doctor/Appointment-TAB.php";
         },
         error:function(error){
 

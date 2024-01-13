@@ -25,8 +25,10 @@
                         <tr>
                             <th>ID</th>
                             <th>VACCINE</th>
+                            <th>BATCH NUMBER </th>
                             <th>ADMINISTERED VACCINE</th>
                             <th>DESCRIPTION</th>
+                            <th>EXPIRATION DATE</th>
                             <th>Active Status</th>
                             <th>ACTION</th>
                         </tr>
@@ -39,12 +41,15 @@
                         <tr>
                             <td><?php echo $value['vacid']; ?></td>
                             <td><?php echo $value['vac_name']; ?></td>
+                            <td><?php echo $value['batch_no']; ?></td>
                             <td><?php echo $value['administered']; ?></td>
                             <td><?php echo $value['vac_desc']; ?></td>
+                            <td><?php echo $value['exp_date']; ?></td>
                             <td><?php if($value['active'] == 1){ echo "Active"; }else{ echo "Inactive"; } ?></td>
                             <td>
                                 <button id="update_vaccine-<?php echo $vacid ; ?>"><i class="fas fa-edit"></i></button>
                                 <button id="delete_vaccine-<?php echo $vacid ; ?>"><i class="fas fa-trash"></i></button>
+                                <button id="add_vaccine-<?php echo $vacid ; ?>"><i class="fas fa-plus"></i></button>
 
                                 <div id="editModal" class="modal">
                                     <div class="editModal2-content">
