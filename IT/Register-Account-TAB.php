@@ -101,6 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <option value="parent">Parent</option>
                                         <option value="admin">Admin</option>
                                         <option value="it">IT</option>
+                                        <option value="doctor">Doctor</option>
                                 </select>
                             </div> 
 

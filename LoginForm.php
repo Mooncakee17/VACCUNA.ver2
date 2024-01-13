@@ -28,6 +28,11 @@ if(isset($_POST['submit'])){
       } elseif ($row['usertype'] == 'it') {
          header('location: ../IT/User-Management-TAB.php');
          exit();
+        
+        } elseif ($row['usertype'] == 'doctor') {
+            $_SESSION['user_id'] = $row['userid'];
+            header('location: ../Doctor/Doctor-Appointment-TAB.php');
+            exit();
 
      }
      // header('location:homeprofile.php');
