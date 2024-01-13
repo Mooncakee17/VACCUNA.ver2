@@ -2,9 +2,9 @@
 
 // Database configuration
 $host = "localhost";
-$username = "u621398810_Vaccuna";
-$password = "Vaccuna.23";
-$database = "u621398810_Vaccunadb_v1";
+$username = " ";
+$password = " ";
+$database = "vaccunadb_v1";
 
 // Create connection
 $conn = mysqli_connect($host, $username, $password, $database);

@@ -30,13 +30,15 @@ rel="stylesheet">
 
             <div class="row">
                 <div class="col-lg-1"></div>
-                <div class="col-lg-3">
-                    <select class="form-select" id="select_child">
-                        <option disabled>-- Select Child --</option>
-                        <?php foreach($child_list as $value){?>
-                            <option value="<?php echo $value['cid']; ?>"><?php echo $value['child_firstname']." ".$value['child_lastname']?></option>
-                        <?php }?>
-                    </select>
+                <div class="col-lg-3"> 
+                <select class="form-select" id="select_child">
+   
+             <?php foreach($child_list as $value) {?>
+        <option value="<?php echo $value['cid']; ?>">
+            <?php echo $value['child_firstname']." ".$value['child_lastname']; ?>
+        </option>
+    <?php }?>
+</select>
                 </div>
                 <div class="col-lg-8"></div>
             </div>

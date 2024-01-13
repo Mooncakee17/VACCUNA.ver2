@@ -202,43 +202,42 @@ function sendemail_verify($username,$email,$token_verified)
    // echo 'Message has been sent';
 }
   //Conditions of inserting data into database
-if(isset($_POST['submit'])){
+  if(isset($_POST['submit'])){
+    $firstname = mysqli_real_escape_string($conn, $_POST['fname']);
+    $lastname = mysqli_real_escape_string($conn, $_POST['lname']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $username = mysqli_real_escape_string($conn, $_POST['uname']);
+    $phonenumber = mysqli_real_escape_string($conn, $_POST['pnumber']);
+    $pass = md5($_POST['password']);
+    $cpass = md5($_POST['cpassword']);
+    $usertype = $_POST ['usertype'];
+    $status = $_POST ['status'];
+    $image = $_FILES['image']['name'];
+    $image_size = $_FILES['image']['size'];
+    $image_tmp_name = $_FILES['image']['tmp_name'];
+    $image_folder = 'uploaded_img/'.$image; 
+    $token_verified = md5(rand());
 
-   $firstname = mysqli_real_escape_string($conn, $_POST['fname']);
-   $lastname = mysqli_real_escape_string($conn, $_POST['lname']);
-   $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $username = mysqli_real_escape_string($conn, $_POST['uname']);
-   $phonenumber = mysqli_real_escape_string($conn, $_POST['pnumber']);
-   $pass = md5($_POST['password']);
-   $cpass = md5($_POST['cpassword']);
-   $usertype = $_POST ['usertype'];
-   $status = $_POST ['status'];
-   $image = $_FILES['image']['name'];
-   $image_size = $_FILES['image']['size'];
-   $image_tmp_name = $_FILES['image']['tmp_name'];
-   $image_folder = 'uploaded_img/'.$image; 
-   $token_verified = md5(rand()); //++token verified, --user_verify
+    $select = mysqli_query($conn, "SELECT * FROM `usertable` WHERE user_email = '$email' AND password = '$pass'") or die('query failed');
 
-   $select= mysqli_query($conn, "SELECT * FROM `usertable` WHERE user_email = '$email' AND password = '$pass'") or die('query failed');
-
-   if(mysqli_num_rows($select) > 0){
-         $message[] = 'user already exist!'; //need rin pala ng message css
-   }else{
+    if(mysqli_num_rows($select) > 0){
+        $message[] = 'User already exists!';
+    } else {
         if($pass != $cpass){
-           $message[] = 'Confirm password not matched!';
-        }elseif($image_size > 2000000){
-           $message[] = 'image size is too large!';
-        }
-   else{
-    $insert = mysqli_query($conn,"INSERT INTO reset_pass(email) VALUES('$email')") or die('query failed');
-         $insert = mysqli_query($conn,"INSERT INTO usertable(firstname, lastname, user_email, username, phonenumber, password, usertype,token_verified, image, status) VALUES('$firstname','$lastname', '$email', '$username','$phonenumber','$pass', '$usertype','$token_verified', '$image', $status)") or die('query failed');
-         if($insert){
-            move_uploaded_file($image_tmp_name, $image_folder);
-            sendemail_verify("$username","$email","$token_verified");
-            $message[] = 'registered successfully!'; 
-            header("Location:https://vaccuna.online/Signup-Confirmation.php");
-         }else{
-            $message[] = 'registration failed!';
+            $message[] = 'Confirm password not matched!';
+        } elseif($image_size > 2000000){
+            $message[] = 'Image size is too large!';
+        } else {
+            $insert_reset_pass = mysqli_query($conn, "INSERT INTO reset_pass(email) VALUES('$email')") or die('reset_pass query failed');
+            $insert_usertable = mysqli_query($conn, "INSERT INTO usertable(firstname, lastname, user_email, username, phonenumber, password, usertype,token_verified, image, status) VALUES('$firstname','$lastname', '$email', '$username','$phonenumber','$pass', '$usertype','$token_verified', '$image', '$status')") or die('usertable query failed');
+
+            if($insert_usertable){
+                move_uploaded_file($image_tmp_name, $image_folder);
+                sendemail_verify($username, $email, $token_verified);
+                $message[] = 'Registered successfully!'; 
+                header('location: Signup-Confirmation.php');
+            } else {
+                $message[] = 'Registration failed!';
          }
       }
    }
