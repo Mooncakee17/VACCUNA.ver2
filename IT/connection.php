@@ -2,13 +2,8 @@
 
 // Database configuration
 $host = "localhost";
-<<<<<<< HEAD
-$username = " ";
-$password = " ";
-$database = "vaccunadb_v1";
-=======
-$username = "root";
-$password = "";
+$username = "u621398810_Vaccuna";
+$password = "Vaccuna.23";
 $database = "u621398810_Vaccunadb_v1";
 >>>>>>> faa3ac918c2adf376f98415b46f075242a025fe6
 
