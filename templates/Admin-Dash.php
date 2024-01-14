@@ -47,7 +47,7 @@
                 <h7 style =" font-size: 15.5px;">Immunization Records</h7>
                 </a>
 
-                <a href="Report-skeletal.php" style="text-decoration: none;">
+                <a href="Full-Report.php" style="text-decoration: none;">
                 <span class="material-icons-sharp">cloud_download</span>
                 <h7 style =" font-size: 15.5px;">Reports</h7>
                 </a>
