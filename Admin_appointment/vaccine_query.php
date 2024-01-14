@@ -2,13 +2,10 @@
 include '../Homepage/config.php';
 ?>
 <?php
-$select = mysqli_query($conn, "SELECT * FROM vaccineinventory a
-LEFT JOIN vaccine_def b ON 
-a.vacid = b.vacid ORDER BY active ASC") or die('query failed');
-$newvac = mysqli_fetch_all($select, MYSQLI_ASSOC);
+//Gagamiting query
+$selectval = mysqli_query($conn, "SELECT * FROM vaccine_def a 
+LEFT JOIN vaccineinventory b ON a.vacid = b.vacid
+WHERE b.vac_name = '%search_variableo%' AND b.active = '%search_variablev%'") or die ('query failed');
 
 
-//Eto yung sa gagamitin mong query sa php file 
-$selectval = mysqli_query($conn, "SELECT * FROM vaccineinventory a LEFT JOIN vaccine_def b ON a.vacid = b.vacid 
-WHERE CONCAT(batch_no, vac_name) LIKE '%searchData%' ORDER BY active ASC") or die ('query failed');
 ?>

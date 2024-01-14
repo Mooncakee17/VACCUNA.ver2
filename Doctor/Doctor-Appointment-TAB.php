@@ -77,7 +77,7 @@ rel="stylesheet">
                                                     <text>parent</text>
                                                 </th>
                                                 <th scope="col" class="col col-auto ps-2 pe-2 text-uppercase">
-                                                    <text>vaccine</text>
+                                                    <text>vaewqewqeccine</text>
                                                 </th>
                                                 <th scope="col" class="col col-auto ps-2 pe-2 text-uppercase">
                                                     <text>status</text>

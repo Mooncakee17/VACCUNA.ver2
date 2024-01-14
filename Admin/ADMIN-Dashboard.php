@@ -94,36 +94,12 @@
                     <thead>
                         <tr>
                             <th>Child Name</th>
-                            <th>Administrator</th>
                             <th>Date</th>
                             <th>Time</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Marijo Pedian</td>
-                            <td>Dr. Conanan</td>
-                            <td>01/24/24</td>
-                            <td>09:00am</td>
-                        </tr>
-                        <tr>
-                            <td>Xavier Coloma</td>
-                            <td>Dr. Talagtag</td>
-                            <td>02/10/24</td>
-                            <td>09:00am</td>
-                        </tr>
-                        <tr>
-                            <td>Yves Conanan</td>
-                            <td>Dr. Coloma</td>
-                            <td>02/10/24</td>
-                            <td>10:00am</td>
-                        </tr>
-                        <tr>
-                            <td>Harold Talagtag</td>
-                            <td>Dr. Pedian</td>
-                            <td>02/18/24</td>
-                            <td>09:00am</td>
-                        </tr>
+                        <?php echo $appt_today_html; ?>
                     </tbody>
                 </table>
             </div>
@@ -141,43 +117,43 @@
                     <tbody>
                         <tr>
                             <td>BCG</td>
-                            <td>150</td>
+                            <td><?php echo $bcg_total; ?></td>
                         </tr>
                         <tr>
                             <td>HepB</td>
-                            <td>150</td>
+                            <td><?php echo $hepb_total; ?></td>
                         </tr>
                         <tr>
                             <td>DTaP</td>
-                            <td>150</td>
+                            <td><?php echo $dtap_total; ?></td>
                         </tr>
                         <tr>
                             <td>HiB</td>
-                            <td>150</td>
+                            <td><?php echo $hib_total; ?></td>
                         </tr>
                         <tr>
                             <td>IPV</td>
-                            <td>150</td>
+                            <td><?php echo $ipv_total; ?></td>
                         </tr>
                         <tr>
                             <td>PCV</td>
-                            <td>150</td>
+                            <td><?php echo $pcv_total; ?></td>
                         </tr>
                         <tr>
                             <td>Rotavirus</td>
-                            <td>150</td>
+                            <td><?php echo $rota_total; ?></td>
                         </tr>
                         <tr>
                             <td>MMR</td>
-                            <td>150</td>
+                            <td><?php echo $mmr_total; ?></td>
                         </tr>
                         <tr>
                             <td>Influenza</td>
-                            <td>150</td>
+                            <td><?php echo $influenza_total; ?></td>
                         </tr>
                         <tr>
                             <td>HepA</td>
-                            <td>150</td>
+                            <td><?php echo $hepa_total; ?></td>
                         </tr>
                     </tbody>
                 </table>
@@ -196,62 +172,65 @@
                     <tbody>
                         <tr>
                             <td>BCG</td>
-                            <td>150</td>
+                            <td><?php echo $bcg_administered; ?></td>
                         </tr>
                         <tr>
                             <td>HepB</td>
-                            <td>150</td>
+                            <td><?php echo $hepb_administered; ?></td>
                         </tr>
                         <tr>
                             <td>DTaP</td>
-                            <td>150</td>
+                            <td><?php echo $dtap_administered; ?></td>
                         </tr>
                         <tr>
                             <td>HiB</td>
-                            <td>150</td>
+                            <td><?php echo $hib_administered; ?></td>
                         </tr>
                         <tr>
                             <td>IPV</td>
-                            <td>150</td>
+                            <td><?php echo $ipv_administered; ?></td>
                         </tr>
                         <tr>
                             <td>PCV</td>
-                            <td>150</td>
+                            <td><?php echo $pcv_administered; ?></td>
                         </tr>
                         <tr>
                             <td>Rotavirus</td>
-                            <td>150</td>
+                            <td><?php echo $rota_administered; ?></td>
                         </tr>
                         <tr>
                             <td>MMR</td>
-                            <td>150</td>
+                            <td><?php echo $mmr_administered; ?></td>
                         </tr>
                         <tr>
                             <td>Influenza</td>
-                            <td>150</td>
+                            <td><?php echo $flu_administered; ?></td>
                         </tr>
                         <tr>
                             <td>HepA</td>
-                            <td>150</td>
+                            <td><?php echo $hepa_administered; ?></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 </div>
-
+<!-- Manipulated lang po-->
     <script src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <script>
         var ctx = document.getElementById('myChart').getContext('2d');
         var administered = document.getElementById('administered').getContext('2d');
         // Assuming the total number of registered children is 40 (10 + 24 + 6)
-        var totalRegisteredChildren = 40;
-
+        var totalRegisteredChildren = <?php echo $registered_count ; ?>;
+        var partially = <?php echo $partially_vaccinated_count ; ?>;
+        var unvaccinated = <?php echo $unvaccinated_count ; ?>;
+        var vaccinated = <?php echo $vaccinated_count ; ?>;
+               
         // Calculate the percentage values for each status
-        var fullyVaccinatedPercentage = ((10 / totalRegisteredChildren) * 100).toFixed(2);
-        var partiallyVaccinatedPercentage = ((24 / totalRegisteredChildren) * 100).toFixed(2);
-        var notVaccinatedPercentage = ((6 / totalRegisteredChildren) * 100).toFixed(2);
+        var fullyVaccinatedPercentage = ((vaccinated / totalRegisteredChildren) * 100).toFixed(2);
+        var partiallyVaccinatedPercentage = ((partially / totalRegisteredChildren) * 100).toFixed(2);
+        var notVaccinatedPercentage = ((unvaccinated / totalRegisteredChildren) * 100).toFixed(2);
 
         var myChart = new Chart(ctx, {
             type: 'pie',

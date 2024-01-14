@@ -141,7 +141,7 @@ table {
 }
 
 /* Style the modals */
-.editModal2-content {
+.editModal2-content, .addModal2-content {
     background-color: #fff;
     margin: 5% auto;
     padding: 1em;
@@ -152,7 +152,7 @@ table {
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
 }
 
-.editModal2-content h2 {
+.editModal2-content h2, .addModal2-content h2 {
     line-height: 2;
     text-align: center;
     color: #8860D0;
@@ -162,7 +162,7 @@ table {
     margin-top: 20px;
 }
 
-.editModal2-content .user-details {
+.editModal2-content .user-details , .addModal2-content .user-details{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
@@ -237,7 +237,9 @@ table {
 }
 
 .editModal2-content button[type="submit"],
-.editModal2-content button {
+.editModal2-content button,
+.addModal2-content button[type="submit"],
+.addModal2-content button {
     width: 100px;
     border-radius: 50px;
     border: none;
@@ -248,7 +250,7 @@ table {
     cursor: pointer;
 }
 
-.editModal2-content button[type="submit"]:hover {
+.editModal2-content button[type="submit"]:hover, .addModal2-content button[type="submit"]:hover {
     background: #5AB9EA;
     transition: .3s ease;
 }

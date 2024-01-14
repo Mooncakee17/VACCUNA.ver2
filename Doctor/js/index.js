@@ -22,7 +22,7 @@ function update_appointment(){
     var dose = $("#dosage").val();
     var appointment_date = $("#appointment_date").val();
     var userid = $("#userid").val();
-    var doctor = $("#doctor_select").val();
+    var doctor = $("#doctor_name").val();
     var for_reason = $("#for_reason").val();
 
     $.ajax({

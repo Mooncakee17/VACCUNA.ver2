@@ -1,7 +1,8 @@
 <?php 
 include '../Homepage/config.php';
+session_start();
 
-
+$userid = $_SESSION['user_id'];
 
 $appt_id = $_POST['appt_id'];
 $get_doctor = array();
@@ -17,17 +18,18 @@ $get_doctor = array();
 	}
 
 	//Get doctor description
-	$select = mysqli_query($conn, "SELECT description FROM business_day a 
-		WHERE available_date = '$appointment_date' ") or die('query failed');
+	$select = mysqli_query($conn, "SELECT a.firstname, a.lastname FROM usertable a WHERE userid = $userid ") or die('query failed');
 	$get_doctor_administer = mysqli_fetch_all($select, MYSQLI_ASSOC);
 
 	foreach($get_doctor_administer as $value2){
-		$doctor_administer = $value2['description'];
+		$doctor_administer = $value2['firstname']." ". $value2['lastname'];
+		/*
 		$temp = array('doctor_name' => $value2['description']);
 		if (!in_array($temp, $get_doctor)){
 			array_push($get_doctor, $temp);
 		}
 
+		*/
 	}
 
 
@@ -55,7 +57,7 @@ $get_doctor = array();
 		 	'email' => $value['email'],
 		 	'vac_name' => $value['vac_name'],
 		 	'cid' => $value['cid'],
-		 	'doctor' => $selectHtml,
+		 	'doctor' => $doctor_administer,
 		 	'for_reason' => $value['for_reason']
 		 );
 	}

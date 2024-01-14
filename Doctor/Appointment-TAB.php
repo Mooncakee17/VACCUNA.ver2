@@ -242,7 +242,7 @@ include('../Admin_appointment/vaccine_details.php'); ?>
 
                                                                 <div class="row mt-3">
                                                                     <div class="col-lg-12" id="doctor" >  
-                                                               
+                                                                        <input type="hidden" id="doctor_name" class="form=control" readonly/>
                                                                     </div>
                                                                 </div>
 
@@ -336,7 +336,7 @@ include('../Admin_appointment/vaccine_details.php'); ?>
                                                             $("#vaccine_administer").val(response.vac_name);
                                                             $("#dosage").val(response.dose);
                                                             $("#dose").val(response.dose);
-                                                            $("#doctor").html(response.doctor);
+                                                            $("#doctor_name").val(response.doctor);
                                                             $("#for_reason").val(response.for_reason);
                                                             if(response.for_reason == "Consultation"){
                                                                 $("#vaccine_name").css("display","none");
@@ -645,7 +645,6 @@ $("#search_by_keyword_container").on("click", "#search_keyword", function () {
 
 
 
-
 $("#update_appointment").click(function(){
     //console.log("clicked !!!!");return false;
     var cid = $("#cid").val();
@@ -655,8 +654,9 @@ $("#update_appointment").click(function(){
     var dose = $("#dosage").val();
     var appointment_date = $("#appointment_date").val();
     var userid = $("#userid").val();
-    var doctor = $("#doctor_select").val();
+    var doctor = $("#doctor_name").val();
     var for_reason = $("#for_reason").val();
+
 
     $.ajax({
         url: '../Admin_appointment/update_appointment.php',

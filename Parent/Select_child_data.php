@@ -411,7 +411,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to check if a date is allowed
   function isDateAllowed(date) {
-    return allowedDates.indexOf(date) !== -1;
+    return allowedDates.indexOf(date) === -1;
   }
 
   // Initialize the datepicker without a value

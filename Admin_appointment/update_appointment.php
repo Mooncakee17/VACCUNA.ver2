@@ -3,14 +3,14 @@ include '../Homepage/config.php';
 
 $cid = $_POST['cid'];
 $dose = $_POST['dose'];
-$appointment_date = $_POST['appointment_date'];
+$appointment_date =$_POST['appointment_date'];
 $userid = $_POST['userid'];
 $appt_id = $_POST['appt_id'];
 $vacid = $_POST['vacid'];
 $vaccine_name = $_POST['vaccine_administer'];
 $doctor = $_POST['doctor']; 
 $for_reason = $_POST['for_reason']; 
-$status_desc = "Completed / Done / Vaccinated";
+$status_desc = "Completsed / Done / Vaccinated";
 $status_desc1 = "For Consultation / For Visit";
 
 
@@ -37,19 +37,38 @@ else{
 	$stock_count = mysqli_fetch_all($select, MYSQLI_ASSOC);
 	$date_today = date ('Y-m-d');
 	$exp_date = ['exp_date'];
-	$batch_no +=1;
+	
 	foreach($stock_count as $value){
 		$count = $value['stocks'];
-		$batch_no = $value['batch_no'];
+		$batch_no = $value['batch_no']; 
 
 	}
 	
 	$new_batch_no = $batch_no +=1;
 
 	if ($count < 1 || $date_today >= $exp_date) {
-		$sql1 = "UPDATE vaccineinventory SET stocks = 2, batch_no = $new_batch_no WHERE vacid = $vacid";
-		mysqli_query($conn, $sql);
-		$result = 'success';
+		//GET THE stocks of next batch
+		
+		$select = mysqli_query($conn, "SELECT *  FROM vaccine_def WHERE vacid = $vacid AND newbatch_no = $new_batch_no AND active_stat = 1; ") or die('query failed');
+		$new_batch_stocks = mysqli_fetch_all($select, MYSQLI_ASSOC);
+		foreach($new_batch_stocks as $value){
+			$new_batch_stocks = $value['stocks'];
+			$batch_expiration_date = date("Y-m-d",strtotime($value['expiration_date']));
+
+		}	
+
+
+
+		$sql1 = "UPDATE vaccineinventory SET stocks = $new_batch_stocks , batch_no = $new_batch_no WHERE vacid = $vacid";
+		mysqli_query($conn, $sql1);
+	
+		//After moving to next batch set the active_status to 0
+		$sql2 = "UPDATE vaccine_def SET active_stat = 0, exp_date = '$batch_expiration_date' WHERE vacid = $vacid AND  batch_no = $new_batch_no ";
+		mysqli_query($conn, $sql2);
+	
+
+
+
 	}
 
 

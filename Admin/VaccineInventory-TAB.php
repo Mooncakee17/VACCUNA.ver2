@@ -91,6 +91,42 @@
                                       
                                     </div>
                                   </div>
+                            
+
+                                <div id="addModal" class="modal">
+                                    <div class="addModal2-content">
+                                 
+                                            <div class="user-details">
+                                                <div class="input-box">
+                                                    <span class="details">ID</span>
+                                                    <input type="text" name="batch_vaccine_id" id="batch_vaccine_id" placeholder="Vaccine ID" value="<?php echo $value['vacid']; ?>" required>
+                                                </div>
+                                                <div class="input-box">
+                                                    <span class="details">Vaccine Batch No </span>
+                                                    <input type="text" name="batch_no"  id="batch_no"  placeholder="Batch Number"  required>
+                                                </div>
+                                                <div class="input-box">
+                                                    <span class="details">Vaccine Expiration Date</span>
+                                                    <input type="date" name="batch_vax_exp"  id="batch_vax_exp"  placeholder="Vaccine type" v required>
+                                                </div>
+                                                <div class="input-box">
+                                                    <span class="details">Vaccine</span>
+                                                    <input type="text" name="vaccine_name"  id="batch_vaccine_name"  placeholder="Vaccine type" value="<?php echo $value['vac_name']; ?>" required>
+                                                </div>
+                                                <div class="input-box">
+                                                    <span class="details">Stocks</span>
+                                                    <input type="text" name="vaccine_stock" id="batch_vaccine_stock" placeholder="Total vaccine stocks"  required>
+                                                </div>
+                                            </div>
+                                            <button id="close_add">Close</button>
+                                            <button id="add_vaccine" onclick="add_vaccine();">Add</button>
+                                      
+                                    </div>
+                                  </div>
+
+
+
+
 
                                 <div id="trashModal" class="modal">
                                     <div class="trashModal-content">
@@ -151,6 +187,36 @@
 
 
 
+
+                        // JavaScript to open the modal add batch
+                        document.getElementById('add_vaccine-<?php echo $vacid ; ?>').addEventListener('click', function() {
+
+                            var add_vaccine = this.id; 
+                            add_vaccine = add_vaccine.split('-')[1];
+
+                             $.ajax({
+                                url:'../Admin_appointment/get_vaccine_details.php',
+                                type:'POST',
+                                data:{update_vaccine:add_vaccine},
+                                success:function(response){
+                               
+                                    if(response.status == "success"){
+                                        $("#add_vaccine_id").val(response.vacid);
+                                        $("#add_vaccine_name").val(response.vac_name);
+                                        var modal = document.getElementById('addModal');
+                                        modal.style.display = "block";
+                                    }
+                                    else{
+                                        alert(response);
+                                    }
+                                }
+                            });                           
+                        });
+
+
+
+
+
                         </script>
 
 
@@ -176,7 +242,16 @@
                 console.log("test4")
                 var modal = document.getElementById('editModal');
                 modal.style.display = "none";
-            });                    
+            });  
+
+
+            document.getElementById('close_add').addEventListener('click', function() {
+                console.log("test4")
+                var modal = document.getElementById('addModal');
+                modal.style.display = "none";
+            });         
+            
+
     </script>
     <!--Process-->
     <script type="text/javascript">
@@ -230,6 +305,41 @@
                 });
        
     }
+
+
+
+
+    function add_vaccine(){
+                const batch_vaccine_id = $("#batch_vaccine_id").val();
+                const batch_no = $("#batch_no").val();
+                const batch_vax_exp = $("#batch_vax_exp").val();
+                const batch_vaccine_name = $("#batch_vaccine_name").val();
+                const batch_vaccine_stock = $("#batch_vaccine_stock").val();
+      
+                $.ajax({
+                    url:'../Admin_appointment/add_vaccine_batch.php',
+                    type:'POST',
+                    data:{
+                        batch_vaccine_id:batch_vaccine_id,
+                        batch_no:batch_no,
+                        batch_vax_exp:batch_vax_exp,
+                        batch_vaccine_name:batch_vaccine_name,
+                        batch_vaccine_stock:batch_vaccine_stock,
+                    },
+                    success:function(response){
+                        if(response == 1){
+                            alert("Successfully Added Vaccine");
+                            window.location.href="VaccineInventory-TAB.php"
+                        }
+                        else{
+                            alert(response);
+                        }
+                    }
+                });
+       
+    }
+
+
 
  
     </script>
