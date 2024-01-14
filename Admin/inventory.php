@@ -79,15 +79,16 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $status = $_GET['status'] ?? '';
 
     // Prepare SQL query based on selected options
-    $sql = "SELECT * FROM vaccineinventory  ";
+    $sql = "SELECT * FROM vaccineinventory WHERE 1 ";
 
-if (!empty($vaccine_name) && !empty($status)) {
-$sql .= "WHERE b.vac_name LIKE '%$vaccine_name' AND b.active = '%$status%' ";
-} elseif (!empty($vaccine_name)) {
-$sql .= "WHERE b.vac_name LIKE '%$vaccine_name%' ";
-} elseif (!empty($status)) {
-$sql .= "WHERE b.active = '%$status%' ";
-}
+    if (!empty($vaccine_name)) {
+        $sql .= "AND vac_name LIKE '%$vaccine_name%' ";
+    }
+
+    if (!empty($status)) {
+        $sql .= "AND  batch_no = '%$status%'";
+    }
+
 
 
     // Execute the SQL query

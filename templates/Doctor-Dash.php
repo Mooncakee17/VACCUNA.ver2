@@ -18,18 +18,18 @@
             </div>
 
             <div class="sider-bar">
-            <a href="Calendar-TAB.php" >
+            <a href="Calendar-TAB.php" style="text-decoration: none;">
                 <span class="material-icons-sharp">calendar_month</span>
                 <h3>Calendar</h3>
                 </a>
 
 
-                <a href="Profile-TAB.php">
+                <a href="Profile-TAB.php" style="text-decoration: none;">
                 <span class="material-icons-sharp">person</span>
                 <h3>Profile</h3>
                 </a>
 
-                <a href="Appointment-TAB.php">
+                <a href="Appointment-TAB.php" style="text-decoration: none;">
                 <span class="material-icons-sharp">schedule_send</span>
                 <h3>Appointments</h3>
                 </a>
