@@ -291,7 +291,7 @@ include('../Admin_appointment/vaccine_details.php'); ?>
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="col-lg-12 text-center">
-                                                                        <h4>Click Yes to send a notificatiodsdn</h4>
+                                                                        <h4>Click Yes to send a notification</h4>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row mt-3">
